@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 function App() {
   const [quote, setQuote] = useState({ text: "", author: "" });
   async function fetchQuote() {
-    const res = await fetch("https://api.quotable.io/random");
+    const res = await fetch("https://quote-generator-api-six.vercel.app/api/quotes/random");
     const data = await res.json();
     setQuote({ text: data.content, author: data.author });
     const colors = [
